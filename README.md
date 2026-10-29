@@ -13,6 +13,41 @@
 - SQLite persistent scores and automated Python API tests
 - Four distinct modules designed for a real team contribution workflow
 
+## Player Achievement System
+
+Memory Match Arena now includes a persistent achievement system that rewards players for completing different gameplay challenges.
+
+### Available Achievements
+
+| Achievement | Requirement |
+|---|---|
+| 🏆 First Victory | Complete a game |
+| ⚡ Speed Runner | Complete a game in 30 seconds or less |
+| 🧠 Perfect Memory | Complete a game without mismatched moves |
+| 🔥 Hard Mode Hero | Complete a game on Hard difficulty |
+| 👀 Peek-Free | Complete a game without using Peek |
+
+### Achievement Gallery
+
+Players can enter their name to view their achievement progress through the **Achievement Gallery**.
+
+The gallery displays:
+
+- Total achievements unlocked
+- Locked and unlocked achievements
+- Achievement descriptions
+- Unlock dates for earned achievements
+- Visual badges for unlocked achievements
+
+Achievements are stored persistently in SQLite and are protected against duplicate unlock records.
+
+### API
+
+The achievement system provides:
+
+```text
+GET /api/achievements?player=<player_name>
+
 ## Tech stack
 
 | Layer | Technology |

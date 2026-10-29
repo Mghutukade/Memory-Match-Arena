@@ -42,6 +42,30 @@
             <div id="leaderboard" aria-live="polite"><p class="empty">Loading scores…</p></div>
             <button id="refreshBtn" class="secondary-btn">↻ Refresh leaderboard</button>
           </section>
+          <section class="panel achievements-panel" id="achievementsPanel">
+            <div class="panel-heading">
+              <div>
+                <span class="overline">PLAYER PROGRESS</span>
+                <h2>Achievement Gallery</h2>
+              </div>
+          
+              <div class="achievement-progress" id="galleryProgress">
+                0 / 5
+              </div>
+            </div>
+          
+            <p class="panel-description">
+              Complete challenges and collect achievement badges as you improve your memory skills.
+            </p>
+          
+            <div id="galleryAchievementList" class="gallery-achievement-list" aria-live="polite">
+              <div class="gallery-empty">
+                <span class="gallery-empty-icon">🏆</span>
+                <strong>Enter your player name to view your achievements.</strong>
+                <span>Your progress will appear here.</span>
+              </div>
+            </div>
+          </section>
           <section class="panel about-panel"><div class="overline">03 / ABOUT</div><h2>How to play</h2><ol><li>Pick a difficulty and enter your name.</li><li>Click any two cards to flip them over.</li><li>Find all matching pairs with fewer moves.</li><li>Submit your score when you finish!</li></ol><div class="tags"><span>Python</span><span>Flask</span><span>JavaScript</span><span>SQLite</span></div></section>
         </aside>
       </section>
@@ -49,6 +73,19 @@
     </main>
     <footer>Made for ROSPL · Open-source learning project · <a href="#team">Meet the contributors</a></footer>
   </div>
-  <div class="modal-backdrop hidden" id="winModal" role="dialog" aria-modal="true" aria-labelledby="winTitle"><div class="modal"><div class="win-symbol">✦</div><div class="overline">LEVEL COMPLETED</div><h2 id="winTitle">Brilliant memory!</h2><p>You found all the pairs.</p><div class="win-summary"><div><span>TIME</span><strong id="finalTime">—</strong></div><div><span>MOVES</span><strong id="finalMoves">—</strong></div><div><span>SCORE</span><strong id="finalScore">—</strong></div></div><div class="modal-actions"><button id="saveBtn" class="primary-btn">Save my score</button><button id="againBtn" class="secondary-btn">Play again</button></div><p id="saveFeedback" role="status"></p></div></div>
+  <div class="modal-backdrop hidden" id="winModal" role="dialog" aria-modal="true" aria-labelledby="winTitle"><div class="modal"><div class="win-symbol">✦</div><div class="overline">LEVEL COMPLETED</div><h2 id="winTitle">Brilliant memory!</h2><p>You found all the pairs.</p><div class="win-summary"><div><span>TIME</span><strong id="finalTime">—</strong></div><div><span>MOVES</span><strong id="finalMoves">—</strong></div><div><span>SCORE</span><strong id="finalScore">—</strong></div></div>
+  <div class="achievements-section">
+    <div class="achievements-heading">
+      <span>ACHIEVEMENTS</span>
+      <span id="achievementCount">0 unlocked</span>
+    </div>
+  
+    <div id="achievementList" class="achievement-list" aria-live="polite">
+      <p class="achievement-empty">
+        Save your score to check your achievements.
+      </p>
+    </div>
+  </div>
+  <div class="modal-actions"><button id="saveBtn" class="primary-btn">Save my score</button><button id="againBtn" class="secondary-btn">Play again</button></div><p id="saveFeedback" role="status"></p></div></div>
 </body>
 </html>

@@ -29,7 +29,11 @@
             <button class="primary-btn" id="restartBtn">↻ New game</button>
           </div>
           <div class="stats" aria-label="Game statistics">
-            <div class="stat"><span>TIME</span><strong id="timer">00:00</strong></div><div class="stat"><span>MOVES</span><strong id="moves">0</strong></div><div class="stat"><span>MATCHES</span><strong id="matches">0/6</strong></div><div class="stat"><span>EST. SCORE</span><strong id="score">1500</strong></div>
+            <div class="stat"><span>TIME</span><strong id="timer">00:00</strong></div>
+            <div class="stat"><span>MOVES</span><strong id="moves">0</strong></div>
+            <div class="stat"><span>RATING</span><strong id="starsRating" class="stars-container"><span class="star">★</span><span class="star">★</span><span class="star">★</span></strong></div>
+            <div class="stat"><span>MATCHES</span><strong id="matches">0/6</strong></div>
+            <div class="stat"><span>EST. SCORE</span><strong id="score">1500</strong></div>
           </div>
           <div class="board-wrap"><div class="board" id="board" aria-label="Memory matching cards"></div></div>
           <div class="game-footer"><span id="hintText">Choose two cards to find a matching pair.</span><button id="hintBtn" class="text-btn" title="Reveal unmatched cards briefly; adds 15 seconds">✧ Peek (+15s)</button></div>
@@ -49,6 +53,24 @@
     </main>
     <footer>Made for ROSPL · Open-source learning project · <a href="#team">Meet the contributors</a></footer>
   </div>
-  <div class="modal-backdrop hidden" id="winModal" role="dialog" aria-modal="true" aria-labelledby="winTitle"><div class="modal"><div class="win-symbol">✦</div><div class="overline">LEVEL COMPLETED</div><h2 id="winTitle">Brilliant memory!</h2><p>You found all the pairs.</p><div class="win-summary"><div><span>TIME</span><strong id="finalTime">—</strong></div><div><span>MOVES</span><strong id="finalMoves">—</strong></div><div><span>SCORE</span><strong id="finalScore">—</strong></div></div><div class="modal-actions"><button id="saveBtn" class="primary-btn">Save my score</button><button id="againBtn" class="secondary-btn">Play again</button></div><p id="saveFeedback" role="status"></p></div></div>
+  <div class="modal-backdrop hidden" id="winModal" role="dialog" aria-modal="true" aria-labelledby="winTitle">
+    <div class="modal">
+      <div class="win-symbol">✦</div>
+      <div class="overline">LEVEL COMPLETED</div>
+      <h2 id="winTitle">Brilliant memory!</h2>
+      <p>You found all the pairs.</p>
+      <div class="win-summary">
+        <div><span>TIME</span><strong id="finalTime">—</strong></div>
+        <div><span>MOVES</span><strong id="finalMoves">—</strong></div>
+        <div><span>RATING</span><strong id="finalStars">★★★</strong></div>
+        <div><span>SCORE</span><strong id="finalScore">—</strong></div>
+      </div>
+      <div class="modal-actions">
+        <button id="saveBtn" class="primary-btn">Save my score</button>
+        <button id="againBtn" class="secondary-btn">Play again</button>
+      </div>
+      <p id="saveFeedback" role="status"></p>
+    </div>
+  </div>
 </body>
 </html>

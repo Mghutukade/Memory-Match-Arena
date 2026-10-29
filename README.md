@@ -72,6 +72,15 @@ Open **http://127.0.0.1:5000** in your browser.
 
 > If activation is restricted, skip it and use `.\.venv\Scripts\python.exe -m pip install -r requirements.txt` then `.\.venv\Scripts\python.exe app.py`.
 
+# Memory Match Arena
+
+A memory matching game built with Flask, HTML, CSS, and JavaScript.
+
+## Setup & Installation
+1. Clone the repository:
+   ```bash
+   git clone [https://github.com/](https://github.com/)<your-username>/Memory-Match-Arena.git
+
 ### Test the backend
 
 ```powershell
